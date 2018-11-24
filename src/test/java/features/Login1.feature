@@ -1,11 +1,12 @@
-Feature: Application Login
-
+Feature: Application Login1
+  @SmokeTest
   Scenario: Home page default login
     Given User is on net banking login page
     When User login to application with "jim" and "1234
     Then Home page is populated
     And Cards are displayed
 
+  @SanityTest
   Scenario: Home page default login
     Given User is on net banking login page
     When User login to application with "john" and "4321"
@@ -13,6 +14,7 @@ Feature: Application Login
     And Cards are not displayed
 
 #Datatable example
+  @RegressionTest
   Scenario: Home page default login
     Given User is on net banking login page
     When User signs up to application with following details
@@ -21,6 +23,7 @@ Feature: Application Login
     And Cards are displayed
 
 #Parameterization to run scenarios multiple time as per the Example inputs
+  @SmokeTest
   Scenario Outline: Home page default login
     Given User is on net banking login page
     When User logs into application with <UserName> and <Password>
