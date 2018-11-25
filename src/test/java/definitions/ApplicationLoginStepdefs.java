@@ -10,6 +10,9 @@ import cucumber.api.java.en.When;
 import java.util.List;
 
 public class ApplicationLoginStepdefs {
+
+    private static final String SCENARIO_SEPARATOR = "------------";
+
     @Given("^User is on net banking login page$")
     public void userIsOnNetBankingLoginPage() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -36,7 +39,7 @@ public class ApplicationLoginStepdefs {
         // Write code here that turns the phrase above into concrete actions
         // throw new PendingException();
         System.out.println("Validated the cards on the home page");
-        System.out.println("--");
+        System.out.println(SCENARIO_SEPARATOR);
     }
 
     @When("^User login to application with \"([^\"]*)\" and \"(\\d+)$")
@@ -59,7 +62,7 @@ public class ApplicationLoginStepdefs {
         // Write code here that turns the phrase above into concrete actions
         // throw new PendingException();
         System.out.println("Validated that the cards are not displayed on the home page");
-        System.out.println("--");
+        System.out.println(SCENARIO_SEPARATOR);
     }
 
     @When("^User signs up to application with following details$")
@@ -81,7 +84,7 @@ public class ApplicationLoginStepdefs {
         // Write code here that turns the phrase above into concrete actions
         // throw new PendingException();
         System.out.println("Cards to be displayed: " + displayCards);
-        System.out.println("--");
+        System.out.println(SCENARIO_SEPARATOR);
     }
 
     @When("^User logs into application with (.+) and (.+)$")
@@ -89,5 +92,24 @@ public class ApplicationLoginStepdefs {
         System.out.println("UserName: " + username + ", Password" + password);
         // Write code here that turns the phrase above into concrete actions
         // throw new PendingException();
+    }
+
+
+    @Given("^Browser exists on user's device\\/Validate the browser$")
+    public void browser_exists_on_users_devicevalidate_the_browser() throws Throwable {
+        //throw new PendingException();
+        System.out.println("Validate the browser");
+    }
+
+    @When("^Browser is triggered$")
+    public void browser_is_triggered() throws Throwable {
+        //throw new PendingException();
+        System.out.println("Browser triggered");
+    }
+
+    @Then("^Check if the browser has started$")
+    public void check_if_the_browser_has_started() throws Throwable {
+        //throw new PendingException();
+        System.out.println("Check if browser has started or not");
     }
 }

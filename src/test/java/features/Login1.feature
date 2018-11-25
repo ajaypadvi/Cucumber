@@ -1,4 +1,10 @@
 Feature: Application Login1
+
+  Background: #This is the background prerequisite task which runs at the start of each and every scenario mentioned in this file
+    Given Browser exists on user's device/Validate the browser
+    When Browser is triggered
+    Then Check if the browser has started
+
   @SmokeTest
   Scenario: Home page default login
     Given User is on net banking login page
@@ -6,7 +12,7 @@ Feature: Application Login1
     Then Home page is populated
     And Cards are displayed
 
-  @SanityTest
+  @SmokeTest
   Scenario: Home page default login
     Given User is on net banking login page
     When User login to application with "john" and "4321"

@@ -1,7 +1,7 @@
 Feature: Application Login2
 
 #Datatable example
-  @SmokeTest
+  @SanityTest
   Scenario: Home page default login
     Given User is on net banking login page
     When User signs up to application with following details
