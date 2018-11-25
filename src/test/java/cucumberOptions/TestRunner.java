@@ -7,6 +7,6 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/java/features",
         glue = "definitions",
-        tags = "@SmokeTest,@RegressionTest,@SanityTest")
+        tags = "@SmokeTest,@RegressionTest,@SanityTest,@MobileTest")
 public class TestRunner {
 }

@@ -5,7 +5,7 @@ Feature: Application Login1
     When Browser is triggered
     Then Check if the browser has started
 
-  @SmokeTest
+  @SanityTest
   Scenario: Home page default login
     Given User is on net banking login page
     When User login to application with "jim" and "1234
